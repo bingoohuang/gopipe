@@ -1,3 +1,5 @@
+github.com/bingoohuang/go-yaml v1.8.1-0.20200719075448-f661c750d714 h1:1np1SZN0yoq/xWtjkvnSIopmH05Xs8lVUPczpDIutbg=
+github.com/bingoohuang/go-yaml v1.8.1-0.20200719075448-f661c750d714/go.mod h1:wZtV6I73uoCd68oFaR47NyBvIAB8VoXgtl0Rfcu2gsA=
 github.com/bingoohuang/golog v0.0.0-20200719023558-df8af22065ac h1:ZlQ+dplCNWYlU2kv5o3OsDjdwuQcZj7bTBqtGpdqRGk=
 github.com/bingoohuang/golog v0.0.0-20200719023558-df8af22065ac/go.mod h1:F4Nmx6PxR34cWwp+lE0pn2RCAj1Nul4AO/55CASdPjA=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
