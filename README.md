@@ -56,7 +56,7 @@ func main() {
         panic(err)
     }
     
-    pipe :=.Run()
+    pipe.Run()
 }
 ```
 
