@@ -1,10 +1,11 @@
 package gopipe_test
 
 import (
-	"github.com/bingoohuang/golog"
-	"github.com/bingoohuang/gopipe/pkg/gopipe"
 	"io/ioutil"
 	"testing"
+
+	"github.com/bingoohuang/golog"
+	"github.com/bingoohuang/gopipe/pkg/gopipe"
 
 	"github.com/stretchr/testify/assert"
 )

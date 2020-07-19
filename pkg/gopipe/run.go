@@ -1,9 +1,10 @@
 package gopipe
 
 import (
+	"time"
+
 	"github.com/gobars/cmd"
 	"github.com/sirupsen/logrus"
-	"time"
 )
 
 func (c PipelineConfig) Run() {
@@ -11,6 +12,7 @@ func (c PipelineConfig) Run() {
 		c.runStages()
 	}
 }
+
 func (c PipelineConfig) runStages() {
 	for _, stage := range c.Stages {
 		c.runStage(stage)

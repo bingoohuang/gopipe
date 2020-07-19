@@ -2,8 +2,9 @@ package gopipe
 
 import (
 	"context"
-	"github.com/bingoohuang/go-yaml"
 	"sort"
+
+	"github.com/bingoohuang/go-yaml"
 )
 
 type RawMessage struct {
