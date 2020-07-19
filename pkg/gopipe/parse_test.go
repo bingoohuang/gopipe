@@ -1,10 +1,11 @@
-package model_test
+package gopipe_test
 
 import (
+	"github.com/bingoohuang/golog"
+	"github.com/bingoohuang/gopipe/pkg/gopipe"
 	"io/ioutil"
 	"testing"
 
-	"github.com/bingoohuang/gopipe/pkg/model"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -12,15 +13,15 @@ func TestParsePipelineConfig(t *testing.T) {
 	config, err := ioutil.ReadFile("testdata/a.yaml")
 	assert.Nil(t, err)
 
-	c := &model.PipelineConfig{}
+	c := &gopipe.PipelineConfig{}
 	assert.Nil(t, c.Parse(config))
-	assert.Equal(t, &model.PipelineConfig{
+	assert.Equal(t, &gopipe.PipelineConfig{
 		Stages: []string{"build", "test", "deploy"},
-		Jobs: []model.Job{
+		Jobs: []gopipe.Job{
 			{
 				Name:  "job 1",
 				Stage: "build",
-				Script: []string{
+				Scripts: []string{
 					"mkdir .public",
 					"cp -r * .public",
 					"mv .public public",
@@ -29,17 +30,20 @@ func TestParsePipelineConfig(t *testing.T) {
 			{
 				Name:  "job 2",
 				Stage: "test",
-				Script: []string{
+				Scripts: []string{
 					"make test",
 				},
 			},
 			{
 				Name:  "job 4",
 				Stage: "deploy",
-				Script: []string{
+				Scripts: []string{
 					"make deploy",
 				},
 			},
 		},
 	}, c)
+
+	golog.SetupLogrus(nil, "")
+	c.Run()
 }
