@@ -10,6 +10,14 @@ import (
 func (c PipelineConfig) Run() {
 	if len(c.Stages) > 0 {
 		c.runStages()
+	} else {
+		c.runJobs()
+	}
+}
+
+func (c PipelineConfig) runJobs() {
+	for _, job := range c.Jobs {
+		job.Run()
 	}
 }
 
